@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>My Ejs File</title>
+        <script src="https://kit.fontawesome.com/4839a5c95b.js" crossorigin="anonymous"></script>
+        <link type="text/css" rel="stylesheet" href="/css/home.css">
+    </head>
+
+    <body>
+        <h1 id="page-heading">
+            <i class="fa-solid fa-address-book"></i>
+            My Contacts List
+        </h1>
+
+        <div id="contacts">
+
+            <ul>
+                <% for(let i of contact_list){ %> 
+                        <li>
+                            <p><%=i.name%></p>
+                            <p><%=i.phone%></p>
+                            <a href="/delete-contact/?id=<%= i._id %>"><i class="fa-solid fa-trash" style="padding: 1em;"></i></a>
+                        </li>
+                <% } %>
+            </ul>
+
+            <form action="/addContact" method="POST">
+                <input type="text" name="name" placeholder="Enter a name" required>
+                <input type="number" name="phone" placeholder="Enter a number" required>
+                <button type="submit">Add a contact</button>
+            </form>
+
+    </div>
+
+        <script type="text/javascript" src="/js/home.js"></script>
+    </body>
+</html>

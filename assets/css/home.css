@@ -1,0 +1,65 @@
+body{
+    margin:0;
+}
+
+#page-heading{
+    text-align: center;
+    margin-top: 25px;
+    color:grey;
+}
+
+ul{
+    padding:0
+}
+
+#contacts{
+    display: flex;
+    flex-direction: column;
+    width:30%;
+    margin:auto;    
+}
+
+li{
+    padding:2px;
+    display: flex;
+    background-color: rgba(0,0,255,0.5);
+    margin:2px 0;
+    color:white;
+    font-weight: bolder;
+    justify-content: space-between;
+}
+
+li:hover{
+    background-color: grey;
+    color:black;
+}
+
+form{
+    display: flex;
+    justify-content: space-between;
+    margin-top:10px;
+}
+
+input{
+    border:none;
+    border-bottom: solid 2px grey;
+    outline: none;
+    width:33%;
+    margin-right:5px;
+}
+
+@media screen and (max-width:1190px){
+    form{
+        flex-wrap: wrap;
+    }
+
+    input{
+        margin:1rem;
+        width:100%;
+    }
+
+    button[type="submit"]{
+        display: block;
+        margin:auto;
+    }
+}
